@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata: 
+  name: todowebapi
+  labels:
+    app: todowebapi
+spec:
+  containers:
+    - name: todowebapi
+      image: mamartins1997/todowebapi:latest

@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: todowebapi
+  labels:
+    app: todowebapi
+spec:
+  selector:
+    matchLabels:
+      app: todowebapi
+  replicas: 3
+  template:
+    metadata: 
+      labels:
+        app: todowebapi
+    spec:
+      containers:
+        - name: todowebapi
+          image: mamartins1997/todowebapi:latest
