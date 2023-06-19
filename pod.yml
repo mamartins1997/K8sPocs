@@ -1,10 +1,10 @@
 apiVersion: v1
 kind: Pod
 metadata: 
-  name: todowebapi
+  name: redis
   labels:
-    app: todowebapi
+    app: redis
 spec:
   containers:
-    - name: todowebapi
-      image: mamartins1997/todowebapi:latest
+    - name: redis
+      image: redis:latest

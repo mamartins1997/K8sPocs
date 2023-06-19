@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: todowebapi
+  name: redis
   labels:
-    app: todowebapi
+    app: redis
 spec:
   selector:
     matchLabels:
-      app: todowebapi
+      app: redis
   replicas: 3
   template:
     metadata: 
       labels:
-        app: todowebapi
+        app: redis
     spec:
       containers:
-        - name: todowebapi
-          image: mamartins1997/todowebapi:latest
+        - name: redis
+          image: redis:latest
